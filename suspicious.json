@@ -1,6 +1,5 @@
 {
   "version": "2025-01",
-
   "blacklist": [
     "metamask-airdrop.io",
     "metamask-login.net",
@@ -55,80 +54,60 @@
     "connect-wallet.online",
     "wallet-recover.shop"
   ],
-
   "patterns": [
-    "airdrop",
-    "bonus",
-    "claim",
-    "giveaway",
-    "free-[a-z0-9-]*",
-    "connect-?wallet",
-    "(wallet|account).*restore",
-    "(wallet|account).*recover",
-    "seed|mnemonic",
-    "support.*(wallet|metamask|binance|coinbase|phantom)",
-    "verify.*(wallet|binance|coinbase|metamask)",
-    "metamask.*(login|verify|restore|claim)",
-    "binance.*(bonus|verify|giveaway|promo)",
-    "coinbase.*(bonus|verify|airdrop)",
-    "kraken.*(bonus|verify|airdrop)",
-    "uniswap.*(claim|airdrop)",
-    "pancakeswap.*(airdrop|claim)",
-    "sushiswap.*(airdrop|claim)",
-    "arbitrum.*(airdrop|claim)",
-    "optimism.*(airdrop|claim)",
-    "zksync.*(airdrop|claim)",
-    "starknet.*(airdrop|claim)",
-    "layerzero.*(airdrop|claim)",
-    "aptos.*(airdrop|claim)",
-    "sei.*(airdrop|claim)",
-    "celestia.*(airdrop|claim)",
-    "linea.*(airdrop|claim)",
-    "scroll.*(airdrop|claim)",
-    "^connect-(metamask|phantom|trustwallet)",
-    "xn--"
+    "^(?:[^\\.]+\\.){3,}.*$",
+    "^(?=.*xn--).*",
+    "^.*-airdrop\\..*$",
+    "^.*-claim\\..*$",
+    "^.*-bonus\\..*$",
+    "^.*-giveaway\\..*$",
+    "^.*(wallet|account|seed|mnemonic).*restore.*$",
+    "^.*(wallet|account).*unlock.*$",
+    "^.*(wallet|account).*recover.*$",
+    "^.*(support|help|desk|desk-support).*(wallet|binance|coinbase|metamask|phantom|trustwallet).*$",
+    "^(?=.*(metamask|phantom|trustwallet|ledger|trezor))(?=.*(login|verify|seed|restore|claim|airdrop|connect|support|help)).*$",
+    "^(?=.*(binance|coinbase|kraken|okx|bybit|bitget))(?=.*(giveaway|bonus|airdrop|claim|login|verify|promo|free|reward)).*$",
+    "^(?=.*(uniswap|pancakeswap|sushiswap|raydium|jupiter))(?=.*(airdrop|claim|bonus|verify|login|connect)).*$",
+    "^(?=.*(arbitrum|optimism|zksync|starknet|layerzero|aptos|sei|celestia|linea|scroll))(?=.*(airdrop|claim|bonus|mint|verify)).*$",
+    "^(?=.*(metamask|phantom|trustwallet|ledger|trezor|binance|coinbase|kraken|okx|bybit|bitget))(?=.*xn--).*",
+    "^(?!.*\\.(?:com|net|org|io|app|dev|finance)$)(?=.*(metamask|phantom|trustwallet|ledger|trezor|binance|coinbase|kraken|okx|bybit|bitget))(?=.*(login|verify|seed|restore|airdrop|claim|bonus|giveaway|promo)).*$",
+    "^(?=.*(airdrops?|free|bonus|gift|reward)).*(?:eth|btc|usdt|usdc|sol).*$",
+    "^(?=.*(connect|connect-wallet|connect-wallets)).*$",
+    "^(?=.*(restore|recover|seed|mnemonic)).*(?:wallet|account|app|web|bridge|auth|secure).*$",
+    "^(?=.*(help|support|verify|login)).*(?:-|-)(?:support|help|verify|login).*$",
+    "^connect-(metamask|phantom|trustwallet)\\..*$",
+    "^(metamask|phantom|trustwallet|ledger|trezor)[-\\.](app|web|login|verify|restore)\\..*$",
+    "^.*(airdrops?|free|bonus|gift|reward).*(eth|btc|usdt|usdc|sol)\\..*$",
+    "^[a-z0-9-]*-(login|verify|restore|seed|wallet)\\..*$"
   ],
-
   "safe": [
     "binance.com",
     "www.binance.com",
     "accounts.binance.com",
-
     "coinbase.com",
     "www.coinbase.com",
     "help.coinbase.com",
-
     "metamask.io",
     "support.metamask.io",
-
     "phantom.app",
     "help.phantom.app",
-
     "ledger.com",
     "www.ledger.com",
-
     "trezor.io",
     "www.trezor.io",
-
     "safe.global",
     "gnosis-safe.io",
-
     "kraken.com",
     "www.kraken.com",
-
     "okx.com",
     "www.okx.com",
-
     "bybit.com",
     "www.bybit.com",
-
     "bitget.com",
     "www.bitget.com",
-
     "uniswap.org",
     "pancakeswap.finance",
     "sushiswap.fi",
-
     "arbitrum.io",
     "optimism.io",
     "zksync.io",
