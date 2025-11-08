@@ -53,7 +53,7 @@
     "claim-token.gift",
     "connect-wallet.online",
     "wallet-recover.shop",
-    "google.com"
+    "www.google.com"
   ],
   "patterns": [
     "^(?:[^\\.]+\\.){3,}.*$",
